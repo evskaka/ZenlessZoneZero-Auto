@@ -47,7 +47,7 @@ class Ocr:
         logger.debug("初始化OCR")
         # 由于PaddleOCR的import速度较慢，所以在这里导入
         from paddleocr import PaddleOCR
-        from paddle.device import is_compiled_with_cuda
+        from paddle import is_compiled_with_cuda
 
         if rec_model_dir is None:  # 如果没有传入模型目录，则下载模型
             rec_model_dir = (
